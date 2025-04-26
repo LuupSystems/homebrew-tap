@@ -5,20 +5,20 @@
 class Globetrotter < Formula
   desc "Polyglot, type-safe internationalization"
   homepage ""
-  version "0.0.4"
+  version "0.0.5"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/LuupSystems/globetrotter/releases/download/v0.0.4/globetrotter_0.0.4_darwin_amd64.tar.gz"
-      sha256 "15886b98add3903df43d843c1007e8a060f285bd4795c3bd11e8ed3476f684dc"
+      url "https://github.com/LuupSystems/globetrotter/releases/download/v0.0.5/globetrotter_0.0.5_darwin_amd64.tar.gz"
+      sha256 "ee6ee37465c46e665965c23ae82f7d1dbc77dc38b2f77ccd46cc60c59e6d2ff4"
 
       def install
         bin.install "globetrotter"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/LuupSystems/globetrotter/releases/download/v0.0.4/globetrotter_0.0.4_darwin_arm64.tar.gz"
-      sha256 "1b7aad1d5624111c1a2884fb1dacee494e53eccd9886d2c08c53734ab492fe20"
+      url "https://github.com/LuupSystems/globetrotter/releases/download/v0.0.5/globetrotter_0.0.5_darwin_arm64.tar.gz"
+      sha256 "1e17e5a5bb76e25edc0cd3c3500af4ea153af773b8971a0c5c3ce6b659a01440"
 
       def install
         bin.install "globetrotter"
@@ -29,8 +29,8 @@ class Globetrotter < Formula
   on_linux do
     if Hardware::CPU.intel?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/LuupSystems/globetrotter/releases/download/v0.0.4/globetrotter_0.0.4_linux_amd64.tar.gz"
-        sha256 "a5cff25048c950a8949e1d97c391ce544e42f5751edd86ff21965db305ee66ff"
+        url "https://github.com/LuupSystems/globetrotter/releases/download/v0.0.5/globetrotter_0.0.5_linux_amd64.tar.gz"
+        sha256 "38ffcdc08d0b175b4ff1844d29f2e892e557a24adfab5fbcecec883b18fe09cc"
 
         def install
           bin.install "globetrotter"
@@ -39,8 +39,8 @@ class Globetrotter < Formula
     end
     if Hardware::CPU.arm?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/LuupSystems/globetrotter/releases/download/v0.0.4/globetrotter_0.0.4_linux_arm64.tar.gz"
-        sha256 "229b18b338c80a9810aa1277a0f57f06cd2ac09297ac070af58da03aa9a9cc4b"
+        url "https://github.com/LuupSystems/globetrotter/releases/download/v0.0.5/globetrotter_0.0.5_linux_arm64.tar.gz"
+        sha256 "cdf8db84c5836f6d5005eaeb9a360ecdd3cc21e0b9a61318f138411978f56862"
 
         def install
           bin.install "globetrotter"
