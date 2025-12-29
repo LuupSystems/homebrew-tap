@@ -3,7 +3,7 @@ cask "globetrotter" do
   name "globetrotter"
   desc "Polyglot, type-safe internationalization"
   homepage ""
-  version "0.0.8"
+  version "0.0.9"
 
   livecheck do
     skip "Auto-generated on release."
@@ -14,22 +14,22 @@ cask "globetrotter" do
   on_macos do
     on_intel do
       url "https://github.com/LuupSystems/globetrotter/releases/download/v#{version}/globetrotter_#{version}_darwin_amd64.tar.gz"
-      sha256 "676895a0b0740fb19df3a5f7b02e2f06e7904864f57fa674c6b6e47e82d71e84"
+      sha256 "62d4a5df3008afd5ae32a434df24a4acc4890d4e27d394cd06e8a7b283d0295e"
     end
     on_arm do
       url "https://github.com/LuupSystems/globetrotter/releases/download/v#{version}/globetrotter_#{version}_darwin_arm64.tar.gz"
-      sha256 "c463a4ec6e385e849f76d0270c6e5f2e137c484128d3d9c4074bff1d97030a7f"
+      sha256 "1af033702b99af043fe2d8160631259443711ecc086aa264474096f16121c970"
     end
   end
 
   on_linux do
     on_intel do
       url "https://github.com/LuupSystems/globetrotter/releases/download/v#{version}/globetrotter_#{version}_linux_amd64.tar.gz"
-      sha256 "6ba9ce3fea6f4f415e131a93dd94197d4afb9d669890ba66562a3758255ace58"
+      sha256 "267edd94889b0e5f418a83d45a79d837477373edaed8aab329ce5a576b8da9de"
     end
     on_arm do
       url "https://github.com/LuupSystems/globetrotter/releases/download/v#{version}/globetrotter_#{version}_linux_arm64.tar.gz"
-      sha256 "9d1578ac9a85564b840d4bd41615c69983fc8be5e309456f579355ecaa8d3d7d"
+      sha256 "1dc8288c2cef2972217f08814400b2969a487012e55f42862b7b98a6235c13a0"
     end
   end
 
