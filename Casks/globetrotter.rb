@@ -2,26 +2,26 @@
 cask "globetrotter" do
   os macos: "darwin", linux: "linux"
 
-  version "0.0.12"
+  version "0.0.13"
 
   on_macos do
     on_intel do
-      sha256 "188220b4c431de4c0769507fd05c67324893ad7bd692168f1705b89f65b2626b"
+      sha256 "24fba34aeaa59bf348f73a112bd0cc21c8b1fd9e1a3e38bc0baad32848e9ecac"
       url "https://github.com/LuupSystems/globetrotter/releases/download/v#{version}/globetrotter_#{version}_darwin_amd64.tar.gz"
     end
     on_arm do
-      sha256 "4cdcafd353917462d80216ca2b3f817d8305b69072a72ea29e82d39aacc9a86b"
+      sha256 "2eac627a7e5e5231a1cd474c7288c59f5a831d97923430a91f8d175d5c053d97"
       url "https://github.com/LuupSystems/globetrotter/releases/download/v#{version}/globetrotter_#{version}_darwin_arm64.tar.gz"
     end
   end
 
   on_linux do
     on_intel do
-      sha256 "909933a8b9a94b6930d7eb98c48e8857cd7df431047bf795468006cbf84571f3"
+      sha256 "d278e86ce48d27a5f3913b5f5ab0f1d4b171fe5d1c02a65f5e9fd6b698f83ea6"
       url "https://github.com/LuupSystems/globetrotter/releases/download/v#{version}/globetrotter_#{version}_linux_amd64.tar.gz"
     end
     on_arm do
-      sha256 "c33b494a98564dbade5195caa3033db500254663a38adca3bcc0b85aece4079f"
+      sha256 "7452dc478939b5bf0f03f9c83373c6380c09fd894e4ddb446ed21cfac2bc3e35"
       url "https://github.com/LuupSystems/globetrotter/releases/download/v#{version}/globetrotter_#{version}_linux_arm64.tar.gz"
     end
   end
