@@ -2,26 +2,36 @@
 cask "globetrotter" do
   os macos: "darwin", linux: "linux"
 
-  version "0.0.17"
+  postflight_steps do
+    on_macos do
+      if_path_exists "/usr/bin/xattr" do
+        run "/usr/bin/xattr",
+            args:         ["-dr", "com.apple.quarantine", "{{staged_path}}/globetrotter"],
+            must_succeed: false
+      end
+    end
+  end
+
+  version "0.0.18"
 
   on_macos do
     on_intel do
-      sha256 "be41353f1cf04925bf00221d77b3c52e758f0912ae9b0affca7d27af49981073"
+      sha256 "d6edd02ec2ffa4c2346969c693d5a6c42b6effe04cfb1d13bd924b4b2c24d8b7"
       url "https://github.com/LuupSystems/globetrotter/releases/download/v#{version}/globetrotter_#{version}_darwin_amd64.tar.gz"
     end
     on_arm do
-      sha256 "5b73bf0fc0a0b9d2f75d3baf983f80dd1e76a5291c95a899c2c1feeb8d3c6e61"
+      sha256 "8c7615612aee3c932dd15aba1871e54280425fef09749f9783f667ac60ce299a"
       url "https://github.com/LuupSystems/globetrotter/releases/download/v#{version}/globetrotter_#{version}_darwin_arm64.tar.gz"
     end
   end
 
   on_linux do
     on_intel do
-      sha256 "532b09541fd0a8dd5f203e4acadbf3058c3f443de5de24890d5870b0869999cd"
+      sha256 "d7b079b09ec63b37758a5294812d1e50f2951f4ec42f079578956dc84898f8ba"
       url "https://github.com/LuupSystems/globetrotter/releases/download/v#{version}/globetrotter_#{version}_linux_amd64.tar.gz"
     end
     on_arm do
-      sha256 "22e2d7ec851168b6f7bbad41942d18ac0eb1931d98f5a31e4c4827877340dc36"
+      sha256 "0e5aaca5a811540235a7cabfddf9419106f9cd59f6f94e517bf0131bda8b5eb3"
       url "https://github.com/LuupSystems/globetrotter/releases/download/v#{version}/globetrotter_#{version}_linux_arm64.tar.gz"
     end
   end
@@ -35,12 +45,6 @@ cask "globetrotter" do
   end
 
   binary "globetrotter"
-
-  postflight do
-    if OS.mac? && File.exist?("/usr/bin/xattr")
-      system_command "/usr/bin/xattr", args: ["-dr", "com.apple.quarantine", "#{staged_path}/globetrotter"]
-    end
-  end
 
   # No zap stanza required
 
